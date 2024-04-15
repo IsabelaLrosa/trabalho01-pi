@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Fatec Itu</title>
+  <!--CSS-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  </style>
+  <link href="css/estilo.css" rel="stylesheet" />
+  <link href="css/tabela.css" rel="stylesheet" />
+  <!--https://divtable.com/table-styler/-->
+</head>
+
+<body>
+  <header>
+    <!-- área de cabeçalho-->
+    <nav>
+      <!-- área de navegação do site-->
+      <ul>
+        <!-- unordered list = lista não ordenada-->
+        <li><a href="index.html">Início</a></li>
+        <!-- list item = itens da lista// opções de menu-->
+        <li><a href="#">Clientes</a></li>
+        <li><a href="quadras.html">Quadras</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Cadastro de Clientes</h1>
+  <form id="formCliente">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="nascimento">Nascimento</label>
+    <input type="date" id="nascimento" name="nascimento" required />
+
+    <label for="estadocivil">Estado Civíl:</label>
+    <select name="estadocivil" id="estadocivil" required>
+      <option value="" selected>Selecione...</option>
+      <option value="solteiro">Solteiro</option>
+      <option value="casado">Casado</option>
+      <option value="viuvo">Viúvo</option>
+    </select>
+    <label for="sexo">Sexo:</label>
+    <div class="opções">
+      <input type="radio" id="masculino" name="sexo" value="masculino" checked />
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="sexo" value="feminino" />
+      <label for="feminino">Feminino</label>
+    </div>
+    <button type="submit" class="botão" id="salvar">Salvar ✔</button>
+  </form>
+  <!-- Tabela de dados-->
+  <table border="1" class="comicGreen">
+    <caption>
+      Relação de Clientes
+    </caption>
+    <thead>
+      <th>Nome</th>
+      <th>Nascimento</th>
+      <th>Estado Civil</th>
+      <th>Sexo</th>
+    </thead>
+    <tbody id="listaClientes">
+
+    </tbody>
+  </table>
+  <!-- Carregando o JavaScript do projeto-->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/* Estilo css do projeto */
+
+@media only screen and (max-device-width: 900px) {
+    /* .menu { width:100%; } */
+}
+/*As cores foram escolhidas para nos lembrarmos de uma bola de basquete*/
+header {
+    background-color: #FF5E17;
+    color: #F2E9DF;
+}
+
+nav {
+    display: flex;
+    /* exibe de forma "flexível" os dados*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    /*coloca tudo na mesma linha*/
+    margin: 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*remove o sublinhado do link*/
+    color: #000;
+    font-weight: bold;
+    /*negrito*/
+    font-size: 14pt;
+}
+
+nav ul li a:hover {
+    color: #F2E9DF;
+    background-color: #1E2123;
+    padding: 16px;
+}
+
+.imagem-svg {
+    margin-top: 32px;
+    display: block;
+    /*uma abaixo da outra*/
+}
+
+body {
+    font-family: 'open+sans', 'sans-serif';
+    font-size: 18px;
+    margin: 0;
+    padding: 16px;
+    background-image: linear-gradient(to left, #06273F, #FF5E17, #A6A6A4, #F2E9DF);
+}
+
+h1 {
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+form {
+    max-width: 500px;
+    /*largura máximo*/
+    margin: 32px auto;
+    /* auto centraliza o conteúdo*/
+    border: 1px solid #000;
+    border-radius: 16px;
+    /*Cantos arredondados*/
+    box-shadow: 0 0 32px rgba(0, 0, 0, 5);
+    /*cria um sombreamento*/
+    background: rgba(227, 222, 222);
+    /* o "A" é de alpha e indica transparencia*/
+    display: flex;
+    /*organiza os elementos de forma flexível*/
+    flex-direction: column;
+    /*os elementos serão exibidos em colunas*/
+    padding: 16px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.opções {
+    flex-direction: row;
+}
+
+label {
+    margin-top: 16px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #000;
+}
+
+.botão {
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    color: #F2E9DF;
+    background-color: #06273F;
+    cursor: pointer;
+    /*tipo do "ponteiro" do mouse*/
+    margin-top: 24px;
+    font-size: 14pt;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.esquerda {
+    text-align: left;
+    margin-left: 180px;
+    margin-top: -100px;
+    margin-bottom: 70px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Fatec Itu</title>
+  <!--CSS-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  </style>
+  <link href="css/estilo.css" rel="stylesheet" />
+  <link href="css/quadras.css" rel="stylesheet" />
+  <!--https://divtable.com/table-styler/-->
+</head>
+
+<body>
+  <header>
+    <!-- área de cabeçalho-->
+    <nav>
+      <!-- área de navegação do site-->
+      <ul>
+        <!-- unordered list = lista não ordenada-->
+        <li><a href="index.html">Início</a></li>
+        <!-- list item = itens da lista// opções de menu-->
+        <li><a href="clientes.html">Clientes</a></li>
+        <li><a href="#">Quadras</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Aluguel de Quadras</h1>
+  <form id="formQuadras">
+    <label for="tipodequadra">Tipo de Quadra</label>
+    <select name="tipodequadra" id="tipodequadra" required>
+      <option value="" selected>Selecione...</option>
+      <option value="futebol">Futebol</option>
+      <option value="volei">Volei</option>
+      <option value="basquete">Basquete</option>
+    </select>
+
+    <label for="data">Data</label>
+    <input type="date" id="data" name="data" required />
+
+    <label for="horáriosdisponíveis">Horários disponíveis</label>
+    <select name="horáriosdisponíveis" id="horáriosdisponíveis" required>
+      <option value="" selected>Selecione...</option>
+      <option value="10:00 - 12:00">10:00 - 12:00</option>
+      <option value="12:00 - 14:00">12:00 - 14:00</option>
+      <option value="14:00 - 16:00">14:00 - 16:00</option>
+      <option value="16:00 - 18:00">16:00 - 18:00</option>
+      <option value="18:00 - 20:00">18:00 - 20:00</option>
+      <option value="20:00 - 22:00">20:00 - 22:00</option>
+    </select>
+
+    <label for="valorfixo">Valor fixo do aluguel</label>
+    <input type="number" name="valorfixo" id="valorfixo" disabled value="300.00" />
+
+    <label for="aluguelpago">Aluguel pago?:</label>
+    <input type="checkbox" id="aluguelPago" checked />
+
+    <button type="submit" class="botão" id="salvar">Salvar ✔</button>
+  </form>
+  <!-- Tabela de dados-->
+  <table border="1" class="comicAulas">
+    <caption>
+      Relação do Aluguel
+    </caption>
+    <thead>
+      <th>Tipo de Quadra</th>
+      <th>Data do aluguel</th>
+      <th>Horários do aluguel</th>
+      <th>Valor fixo à pagar</th>
+      <th>Aluguel pago?</th>
+    </thead>
+    <tbody id="listaQuadras"></tbody>
+  </table>
+  <!-- Carregando o JavaScript do projeto-->
+  <script src="js/quadras.js"></script>
+</body>
+
+</html>
